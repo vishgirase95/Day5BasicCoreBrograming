@@ -11,19 +11,31 @@ namespace ConsoleApp1
 
          static void Main(string[] args)
         {
-            Console.WriteLine("Enter the number:");
-            int a= Convert.ToInt32( Console.ReadLine());
+            Console.WriteLine("Enter the Alphabet to check Vowels or consonants:");
+            string Alphabet = Console.ReadLine();
+            string[] Vowels = new string[5] { "a","e","i","o","u"};
+            int yes = 0;
 
-            if (a % 2 == 0)
+            for (int i = 0; i < Vowels.Length; i++)
             {
-                Console.WriteLine($"{a} is Even Number");
-            }
-            else
-            {
-                Console.WriteLine($"{a} is Odd Number");
+                if (Alphabet == Vowels[i])
+                {
+                    yes++;
+                }
 
-            }
+                if (yes == 1)
+                {
+                    Console.WriteLine($"{Alphabet} is the Vowels");
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine($"{Alphabet} is the consonants");
+                    break;
 
+
+                }
+            }
         }
     }
 }
