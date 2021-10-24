@@ -7,16 +7,32 @@ namespace ConsoleApp1
     class Class1
     {
 
-     public static void HarmonicSeries()
+     public static void PrimeFactor()
         {
-            double s = 0;
+            int number =Convert.ToInt32( Console.ReadLine());
+            int diviser = 0;
 
-            float Nth_number =Convert.ToInt32( Console.ReadLine());
-            for(double i=1; i<=Nth_number; i++)
+            for (int i = 2; i <= (number / 2); i++)
             {
-                s = s+1 / i;
-                Console.WriteLine(s);
+                if (number % i == 0)
+                {
+
+                    diviser++;
+                }
             }
+                if (diviser == 0)
+                {
+                    Console.WriteLine($"{number} is a prime");
+                }
+                else
+                {
+                    Console.WriteLine($"{number} is not prime");
+                    
+                }
+           
+
+            
+
         }
     }
 }

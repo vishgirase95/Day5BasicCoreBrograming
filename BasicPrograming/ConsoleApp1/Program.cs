@@ -11,10 +11,9 @@ namespace ConsoleApp1
 
          static void Main(string[] args)
         {
-            
-            Console.WriteLine("Enter the Nth number of Harmonuc series :");
-            Class1.HarmonicSeries();
-            Console.Read();
+
+            Console.WriteLine("Enter number to check Prime factor :");
+            Class1.PrimeFactor();
           
            
      
