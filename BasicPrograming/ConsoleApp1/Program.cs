@@ -11,18 +11,14 @@ namespace ConsoleApp1
 
          static void Main(string[] args)
         {
-
-            Console.WriteLine("Enter number to check Quotient and Remainder :");
-            Console.WriteLine("Enter Dividend and Divisor :");
-            
-            Class1.Remainder();
-            Class1.Quotietent();
-
-
-
-
-
-
+            Console.WriteLine("Enter the A :");
+            int a= Convert.ToInt32( Console.ReadLine());
+            Console.WriteLine("Enter the b :");
+            int b = Convert.ToInt32(Console.ReadLine());
+            int c = a;
+            a = b;
+            b = c;
+            Console.WriteLine($"After Swaping , {a} is A and {b} is B");
 
 
         }
