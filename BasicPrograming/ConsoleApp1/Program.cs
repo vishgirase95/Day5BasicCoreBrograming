@@ -11,31 +11,20 @@ namespace ConsoleApp1
 
          static void Main(string[] args)
         {
-            Console.WriteLine("Enter the Alphabet to check Vowels or consonants:");
-            string Alphabet = Console.ReadLine();
-            string[] Vowels = new string[5] { "a","e","i","o","u"};
-            int yes = 0;
+            Console.WriteLine("Enter the number1 to campare:");
+            int number1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the number2 to campare:");
 
-            for (int i = 0; i < Vowels.Length; i++)
-            {
-                if (Alphabet == Vowels[i])
-                {
-                    yes++;
-                }
+            int number2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the number3 to campare:");
 
-                if (yes == 1)
-                {
-                    Console.WriteLine($"{Alphabet} is the Vowels");
-                    break;
-                }
-                else
-                {
-                    Console.WriteLine($"{Alphabet} is the consonants");
-                    break;
+            int number3 = Convert.ToInt32(Console.ReadLine());
+            int[] Numbers = new int[] { number1, number2, number3 };
 
+            Array.Sort(Numbers);
 
-                }
-            }
+            Console.WriteLine($"{Numbers[Numbers.Length-1]} is the Largest number out of all");
         }
     }
+    
 }
