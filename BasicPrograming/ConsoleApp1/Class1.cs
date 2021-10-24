@@ -7,31 +7,27 @@ namespace ConsoleApp1
     class Class1
     {
 
-     public static void PrimeFactor()
+
+       public static int number1 = Convert.ToInt32(Console.ReadLine());
+       public static  int number2 = Convert.ToInt32(Console.ReadLine());
+
+        public static void Remainder()
         {
-            int number =Convert.ToInt32( Console.ReadLine());
-            int diviser = 0;
 
-            for (int i = 2; i <= (number / 2); i++)
-            {
-                if (number % i == 0)
-                {
+            int reminder = number1 % number2;
+            Console.WriteLine($"{reminder} is the Remainder");
 
-                    diviser++;
-                }
-            }
-                if (diviser == 0)
-                {
-                    Console.WriteLine($"{number} is a prime");
-                }
-                else
-                {
-                    Console.WriteLine($"{number} is not prime");
-                    
-                }
-           
 
-            
+
+        }
+
+        public static void Quotietent()
+        {
+
+
+            int quotient = number1 /number2;
+            Console.WriteLine($"{quotient} is the Quotietent");
+
 
         }
     }

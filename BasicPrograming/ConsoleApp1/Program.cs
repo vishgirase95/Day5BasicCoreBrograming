@@ -12,11 +12,18 @@ namespace ConsoleApp1
          static void Main(string[] args)
         {
 
-            Console.WriteLine("Enter number to check Prime factor :");
-            Class1.PrimeFactor();
-          
-           
-     
+            Console.WriteLine("Enter number to check Quotient and Remainder :");
+            Console.WriteLine("Enter Dividend and Divisor :");
+            
+            Class1.Remainder();
+            Class1.Quotietent();
+
+
+
+
+
+
+
 
         }
     }
