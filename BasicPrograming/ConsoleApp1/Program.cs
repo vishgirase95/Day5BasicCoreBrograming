@@ -2,39 +2,77 @@
 
 namespace ConsoleApp1
 {
+
+
+   
     class Program
     {
-        static void Main(string[] args)
-        {
-            int currentFlip = 1;
-            Console.WriteLine("Enter The number of Flip :");
-            int flipNumber = Convert.ToInt32(Console.ReadLine());
-            int HeadCount = 0;
-            int TailCount = 0;
 
-            int i = 0;
-            while (i <= flipNumber)
+            static int CorrectYear = 999;
+
+        public static void CheckYear() {
+            int InputYear = Convert.ToInt32(Console.ReadLine());
+
+            if (InputYear < 999)
             {
-                Random flip = new Random();
-                int  RandomNumber= flip.Next(1, 3);
+                Console.WriteLine("Please Enter Year in YYYY form.");
+
+            }
+            else
+            {
+                CorrectYear = InputYear;
+            }
+          
+        }
 
 
-                if (currentFlip == RandomNumber)
+        public static void CheckLeapYear()
+        {
+
+            if (CorrectYear > 999) 
+
+            if (CorrectYear % 4 == 0)
+            {
+                if (CorrectYear % 100 == 0)
                 {
-                    Console.WriteLine("Head");
-                    HeadCount++;
+                    if (CorrectYear % 400 == 0)
+                    {
+                        Console.WriteLine($"{CorrectYear} is leap Year");
+
+                    }
+                    else
+                    {
+                        Console.WriteLine($"{CorrectYear} is not leap Year");
+
+                    }
                 }
                 else
                 {
-                    Console.WriteLine("Tail");
-                    TailCount++;
-                }
-                i++;
-            }
+                    Console.WriteLine($"{CorrectYear} is leap Year");
 
-            int PercentageOfHead = (100 * HeadCount) / flipNumber;
-            int PercentageOfTail =100- PercentageOfHead;
-            Console.WriteLine($"The Percentage of Head count {PercentageOfHead}% and the percentage of tail count is {PercentageOfTail}%");        
+
+                }
+            }
+            else
+            {
+                Console.WriteLine($"{CorrectYear} is not leap Year");
+            }
+        }
+
+
+
+         static void Main(string[] args)
+        {
+            
+            Console.WriteLine("Enter the Year to check if its Leap Year :");
+           
+            CheckYear();
+
+            CheckLeapYear();
+
+
+
+
         }
     }
 }
