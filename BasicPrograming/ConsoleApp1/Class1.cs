@@ -7,22 +7,16 @@ namespace ConsoleApp1
     class Class1
     {
 
-     
-
-        public static void TwoPower()
+     public static void HarmonicSeries()
         {
-            int InputPower =Convert.ToInt32( Console.ReadLine());
+            double s = 0;
 
-            for (int i = 1; i <= InputPower; i++) {
-
-                Console.WriteLine(Math.Pow(2, i));
-
- 
-              
-            
+            float Nth_number =Convert.ToInt32( Console.ReadLine());
+            for(double i=1; i<=Nth_number; i++)
+            {
+                s = s+1 / i;
+                Console.WriteLine(s);
             }
-
         }
-
     }
 }
